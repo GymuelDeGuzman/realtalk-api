@@ -17,7 +17,8 @@ from io import BytesIO
 import base64
 
 app = Flask(__name__)
-CORS(app, resources={r"/upload": {"origins": "https://realtalk-webapp.vercel.app/"}})
+# CORS(app, resources={r"/upload": {"origins": "https://realtalk-webapp.vercel.app/"}})
+CORS(app)
 
 model_id = "Anthuni/thesis_model"
 token = "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"     
