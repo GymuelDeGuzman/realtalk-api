@@ -1,17 +1,5 @@
 {
-  "version": 2,
-  "builds": [
-    { "src": "/api/app.py",
-      "use": "@vercel/python",
-      "config": {
-        "maxLambdaSize": "450mb"
-      }
-    }   
-  ],
-
-  "routes": [
-    { "src": "/api/(.*)",
-      "dest": "/api/app.py",
-      "methods": ["GET", "POST", "PUT", "PATCH", "DELETE"] }
+  "rewrites": [
+    { "source": "/(.*)", "destination": "/api/app.py" }
   ]
 }
